@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Start Cloud Computing as a Beginner — Raghav Malik</title>
+    <meta name="description" content="A complete roadmap to starting your cloud computing journey.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .post-header {
+            padding: 140px 24px 60px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .post-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+        .post-meta {
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .post-category {
+            color: var(--cyan);
+            background: var(--cyan-glow);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .post-content h2 {
+            color: var(--text-primary);
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+        }
+        .post-content h3 {
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+        }
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        .post-content ul, .post-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .post-content li {
+            margin-bottom: 10px;
+        }
+        .post-content strong {
+            color: var(--text-primary);
+        }
+        .post-content .highlight {
+            background: var(--bg-glass);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            color: var(--accent-light);
+        }
+        .post-content .callout {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="RaghavMalik.html" class="nav-logo">RM.</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="blog.html" style="color: var(--accent-light);">Blog</a></li>
+            <li><a href="RaghavMalik.html#about">About</a></li>
+            <li><a href="RaghavMalik.html#skills">Skills</a></li>
+            <li><a href="RaghavMalik.html#experience">Experience</a></li>
+            <li><a href="RaghavMalik.html#projects">Projects</a></li>
+            <li><a href="RaghavMalik.html#education">Education</a></li>
+            <li><a href="RaghavMalik.html#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <article>
+        <header class="post-header fade-up">
+            <span class="post-category">Cloud Computing</span>
+            <h1>How to Start Cloud Computing as a Beginner — A Complete Roadmap</h1>
+            <div class="post-meta">
+                <span>May 5, 2025</span>
+                <span>7 min read</span>
+            </div>
+        </header>
+
+        <div class="post-content fade-up">
+            <p>Cloud computing can feel overwhelming at first. You hear terms like AWS, Azure, GCP, EC2, S3, Docker, and Kubernetes thrown around constantly. Where do you even begin? In this post, I'll break down exactly how I started my cloud journey and how you can too, without getting lost in the noise.</p>
+
+            <h2>Phase 1: Understand the Basics</h2>
+            <p>Before touching any cloud platform, you need to understand <em>what</em> the cloud actually is. It's essentially someone else's computer, but the power lies in how you access and manage it.</p>
+            <ul>
+                <li><strong>IaaS (Infrastructure as a Service):</strong> You manage the OS, runtime, and data. (e.g., AWS EC2)</li>
+                <li><strong>PaaS (Platform as a Service):</strong> You manage the data and application. (e.g., Heroku, AWS Elastic Beanstalk)</li>
+                <li><strong>SaaS (Software as a Service):</strong> You just use the software. (e.g., Google Workspace, Salesforce)</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Pro Tip:</strong> Don't try to learn every cloud provider at once. Pick one to start. AWS is currently the market leader and has the most resources available for beginners.
+            </div>
+
+            <h2>Phase 2: Core Concepts (The Big Three)</h2>
+            <p>If you start with AWS, focus on these three core services first. They form the foundation of almost everything else:</p>
+            <ol>
+                <li><strong>Compute (EC2):</strong> Virtual servers in the cloud. Learn how to spin up a Linux instance, SSH into it, and install a basic web server.</li>
+                <li><strong>Storage (S3):</strong> Object storage. Learn how to create a bucket, upload files, and configure permissions to host a static website.</li>
+                <li><strong>Networking (VPC & IAM):</strong> Understanding how your resources connect and who has access to them. IAM (Identity and Access Management) is critical for security.</li>
+            </ol>
+
+            <h2>Phase 3: Get Hands-On (The Most Important Part)</h2>
+            <p>Watching tutorials won't make you a cloud engineer. You have to build things. Here are a few beginner projects to try:</p>
+            <ul>
+                <li>Host a static HTML/CSS portfolio on an S3 bucket.</li>
+                <li>Deploy a simple Python/Node.js app on an EC2 instance.</li>
+                <li>Set up a simple database using RDS and connect it to your application.</li>
+            </ul>
+
+            <h2>Phase 4: Certifications (Optional but Helpful)</h2>
+            <p>Certifications can provide a structured learning path. I started with the <span class="highlight">AWS Certified Cloud Practitioner</span>. It's a great way to validate your foundational knowledge and understand the AWS ecosystem broadly before diving deep into specific technical roles.</p>
+
+            <h2>Resources to Get Started</h2>
+            <p>Here are some of the resources I found most helpful:</p>
+            <ul>
+                <li><strong>FreeCodeCamp:</strong> Their AWS Cloud Practitioner course on YouTube is phenomenal.</li>
+                <li><strong>AWS Free Tier:</strong> Sign up for an account and use the free tier. Just remember to set up billing alarms!</li>
+                <li><strong>A Cloud Guru / Cloud Academy:</strong> Great platforms if you're willing to invest in a subscription.</li>
+            </ul>
+
+            <p>The cloud is vast, but you don't need to know everything. Start small, build consistently, and the pieces will start falling into place. Happy building!</p>
+
+            <a href="blog.html" class="back-link">← Back to Blog</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed & Built by <a href="RaghavMalik.html">Raghav Malik</a> · 2025</p>
+    </footer>
+
+    <script>
+        // Cursor glow and basic nav logic...
+        const glow = document.getElementById('cursorGlow');
+        document.addEventListener('mousemove', e => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
